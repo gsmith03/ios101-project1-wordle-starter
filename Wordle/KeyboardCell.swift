@@ -31,6 +31,11 @@ class KeyboardCell: UICollectionViewCell {
     */
     // START YOUR CODE HERE
     // ...
+      self.string = string
+      label.text = string
+      labelContainerView.layer.cornerRadius = 4.0
+      labelContainerView.backgroundColor = .gray
+      
     // END YOUR CODE HERE
   }
 
@@ -39,6 +44,10 @@ class KeyboardCell: UICollectionViewCell {
   @objc private func didTapString() {
     // START YOUR CODE HERE
     // ...
+      if let didSelectString = didSelectString {
+          didSelectString(self.string)
+      }
+      
     // END YOUR CODE HERE
   }
 }
